@@ -1,4 +1,4 @@
-//Changable Variables
+//Change Variables
 let var1 
 var1 = 123;
 var1
@@ -35,4 +35,4 @@ let myFlsBoo = false
 myTruBoo //is truthy
 myFlsBoo //is falsy
 
-//JS - CAPTIALIZATION MATTERS
+//JS - CAPITALIZATION MATTERS
