@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #main{
+            background-color: lightblue;
+            font-family: "Calibri";
+            color: rgb(131, 65, 40);
+            font-size: larger;
+        }
+
+        #title{
+            font-weight: bold;
+            font-size: larger;
+            display: flex;
+            justify-content: center;
+        }
+
+        #img-div{
+            width: 1000px;
+            height: 700px;
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            text-align: center;
+        }       
+        
+        #image{
+            margin-top: 10%;
+            margin-bottom: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+            text-align: center;
+            grid-area: "image";
+        }
+        
+        #img-caption{
+            color: rgb(153, 84, 58);
+            grid-area: "img-caption"
+        }
+            
+       
+    </style>
+
+</head>
+<div id="main">
+    <div id="title">
+        <h1>My Teaching Career</h1>
+    </div>
+    <figure class="container" id="img-div">
+        <img id="image" src="https://images.pexels.com/photos/5088022/pexels-photo-5088022.jpeg" alt="school supplies">
+        <br>
+        <figcaption id="img-caption"><em>an iPad, artwork, paperclips, erasers, and scissors</em></figcaption>
+    </figure>
+    <div id="tribute-info">
+        <p>Teaching was always my dream. Well, once I realized that enjoying a good argument isn't enought of a reason to become a lawyer. 
+            I've been teaching since 2003 and never saw myself retiring. COVID has changed that.</p>
+        <p>After working with prepackaged, asyncronous curriculum for K-2, I realized that I want the ability to build it myself.
+            I see a need for digital K-2 curriclum built by someone with more of an education background than a developer background.
+            I'm capable of learning to code and design in an electronic environment, so here I am.</p>
+        <p>I don't want to completely leave education, but I do want to move into curriclum design and development.</p>
+         <p><strong>Education Week</strong> has an article on <a id="tribute-link" target=_blank href="https://www.edweek.org/teaching-learning/did-covid-19-really-drive-teachers-to-quit/2020/11">how COVID-19 is not necessarily causing teachers to quit.</a>
+        If you read carefully, many teachers feel as though their options are limited. Picking up some new skills can change that.</p>
+    </div>
+</div>
+</html>
