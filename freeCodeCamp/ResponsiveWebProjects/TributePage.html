@@ -2,55 +2,53 @@
 <html>
 <head>
     <style>
-        #main{
-            background-color: lightblue;
-            font-family: "Calibri";
-            color: rgb(131, 65, 40);
-            font-size: larger;
-        }
+#main {
+  background-color: lightBlue;
+  font-family: "Calibri";
+  color: rgb(131, 65, 40);
+  font-size: larger;
+}
 
-        #title{
-            font-weight: bold;
-            font-size: larger;
-            display: flex;
-            justify-content: center;
-        }
+#title {
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+}
 
-        #img-div{
-            width: 1000px;
-            height: 700px;
-            background-color: lightgoldenrodyellow;
-            display: flex;
-            text-align: center;
-        }       
-        
-        #image{
-            margin-top: 10%;
-            margin-bottom: 5%;
-            margin-left: 5%;
-            margin-right: 5%;
-            text-align: center;
-            grid-area: "image";
-        }
-        
-        #img-caption{
-            color: rgb(153, 84, 58);
-            grid-area: "img-caption"
-        }
-            
-       
+#img-div {
+  width: 800px;
+  background-color: lightGoldenrodYellow;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#image {
+  display: block;
+  max-width: 70%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#img-caption {
+  color: rgb(153, 84, 58);
+  text-align: center;
+}
     </style>
 
 </head>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 <div id="main">
     <div id="title">
         <h1>My Teaching Career</h1>
     </div>
-    <div class="container" id="img-div">
-        <img id="image" src="https://images.pexels.com/photos/5088022/pexels-photo-5088022.jpeg" alt="school supplies">
-        <br>
+    <figure id="img-div">
+      <br>  
+      <img id="image" src="https://images.pexels.com/photos/5088022/pexels-photo-5088022.jpeg" alt="school supplies">
         <figcaption id="img-caption"><em>an iPad, artwork, paperclips, erasers, and scissors</em></figcaption>
-    </div>
+      <br>
+    </figure>
     <div id="tribute-info">
         <p>Teaching was always my dream. Well, once I realized that enjoying a good argument isn't enought of a reason to become a lawyer. 
             I've been teaching since 2003 and never saw myself retiring. COVID has changed that.</p>
