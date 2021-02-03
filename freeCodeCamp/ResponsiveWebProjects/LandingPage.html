@@ -5,16 +5,16 @@
     #header {
         position: fixed;
         top: 0;
+        margin: 0;
         width: 100%;
         background-color: #333;
-        vertical-align: middle;
         font-size: 25px;
         height: 70px;
     }
 
     ul {
         list-style-type: none;
-        margin: 5px 5px 0px 5px;
+        margin: 5px 5px 0 5px;
         padding: 5px;
         overflow: hidden;
     }
@@ -37,6 +37,14 @@
         margin: 10px;
         float: left
     }
+body {
+    background-color: rgb(253, 207, 230);
+    font-size: 20px;
+}
+
+#form {
+    text-align: center;
+}
 </style>
 
 </head>
@@ -45,7 +53,7 @@
 <img id="header-img" src="https://webtoolfeed.files.wordpress.com/2012/10/zombie_barbie.jpg" alt="logo">
 <nav id="nav-bar">
     <ul>
-        <li class="nav-link"><a href="#">Link1</a></li>
+        <li class="nav-link"><a href="#bride">Bridal Fashion</a></li>
         <li class="nav-link"><a href="#">Link2</a></li>
         <li class="nav-link"><a href="#">Link3</a></li>
     </ul>
@@ -54,10 +62,19 @@
 
 <body>
 
+    <a name="bride">
+    <h1>Bridal Fashion</h1>
+    <label for="video">Watch to see Barbie zombie fashion.</label>
+    <br>
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uUSafgf1uC0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </a>
 
-
-
-
+    <form id="form" action="https://www.freecodecamp.org/email-submit">
+        <label for="email">Sign up for the mailing list:</label>
+        <br>
+        <input type="email" placeholder="email address" value="email" required>
+        <input type="submit" value="submit">
+    </form>
 </body>
 
 
