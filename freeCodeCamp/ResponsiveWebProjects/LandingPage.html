@@ -11,14 +11,12 @@
         font-size: 25px;
         height: 70px;
     }
-
     ul {
         list-style-type: none;
         margin: 5px 5px 0 5px;
         padding: 5px;
         overflow: hidden;
     }
-
     li a {
         float: left;
         color: lavender;
@@ -26,40 +24,42 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-
     li a:hover {
         background-color: #111;
     }
-
     #header-img {
         width: 50px;
         height: 50px;
         margin: 10px;
         float: left
     }
-    .body {
+    body {
         background-color: rgb(253, 207, 230);
-        font-size: 20px;
-        display: flexbox;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
+        font-size: 23px;
         padding-top: 50px;
+        padding-bottom: 50px;
     }
-
-    @media (max-width: 800px) {
-        .body {
-            flex-direction: column;
-        }
-    }
-
-    #form {
+    footer {
         text-align: center;
         background-color: #333;
         color: lavender;
+        position: fixed;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+       
     }      
-
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    p {
+        margin: 10px;
+        padding-left: 10px;
+    }
+    h1 {
+        text-align: center;
+    }
 </style>
 
 </head>
@@ -68,20 +68,43 @@
 <img id="header-img" src="https://webtoolfeed.files.wordpress.com/2012/10/zombie_barbie.jpg" alt="logo">
 <nav id="nav-bar">
     <ul>
-        <li class="nav-link"><a href="#bride">Bridal Fashion</a></li>
-        <li class="nav-link"><a href="#">Link2</a></li>
-        <li class="nav-link"><a href="#">Link3</a></li>
+        <li class="nav-link"><a href="#about">ZFashion</a></li>
+        <li class="nav-link"><a href="#bride">Bridal Looks</a></li>
+        <li class="nav-link"><a href="#hair">Salon</a></li>
     </ul>
 </nav>
 </header>
 
-<body class="body">
+<body>
+
+    <a name="about">
+    <br>
+    <h1>About Zfashion</h1>
+    <div class="container">
+    <img src="https://images.pexels.com/photos/5435548/pexels-photo-5435548.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="female zombie" width="100px">
+    <p>Being zombified no longer means wretched fashion choices. Even the undead can be fashionable with ZFashion.
+        Our looks all start with the latest runway fashions, and then we add a touch of what makes each zombie unique. 
+        Check out this blog post to <a target=_blank href="https://craftsbyamanda.com/barbie-zombies-the-walking-dead/">read about our process.</a>
+    </div>
+    </a>
+    </p>
 
     <a name="bride">
-    <h1>Bridal Fashion</h1>
+    <h1>Bridal Looks</h1>
     <label for="video">Watch to see Barbie zombie fashion.</label>
     <br>
     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uUSafgf1uC0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </a>
+
+    <a name="hair">
+    <h1>Salon Services</h1>
+    <div class="container">
+    <p>We offer a full menu of salon services with stylists trained in the unique needs of zombies. 
+        Our stylists follow all the latest trends and adapt them for our customers. We even come to you!
+        All salon services are priced to reflect the specific needs of each client. Please call 555-5555 for a quote.
+    </p>
+    <img src="http://thebeautifulcircus.com/wp-content/uploads/2017/10/GlamZombie_736_lastpic.jpg" width="200px">
+    </div>
     </a>
 
 </body>
@@ -96,3 +119,4 @@
 </footer>
 
 </html>
+
