@@ -21,7 +21,7 @@
 
     li a {
         float: left;
-        color: white;
+        color: lavender;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -37,14 +37,29 @@
         margin: 10px;
         float: left
     }
-body {
-    background-color: rgb(253, 207, 230);
-    font-size: 20px;
-}
+    .body {
+        background-color: rgb(253, 207, 230);
+        font-size: 20px;
+        display: flexbox;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 50px;
+    }
 
-#form {
-    text-align: center;
-}
+    @media (max-width: 800px) {
+        .body {
+            flex-direction: column;
+        }
+    }
+
+    #form {
+        text-align: center;
+        background-color: #333;
+        color: lavender;
+    }      
+
 </style>
 
 </head>
@@ -60,7 +75,7 @@ body {
 </nav>
 </header>
 
-<body>
+<body class="body">
 
     <a name="bride">
     <h1>Bridal Fashion</h1>
@@ -69,13 +84,15 @@ body {
     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uUSafgf1uC0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </a>
 
-    <form id="form" action="https://www.freecodecamp.org/email-submit">
-        <label for="email">Sign up for the mailing list:</label>
-        <br>
-        <input type="email" placeholder="email address" value="email" required>
-        <input type="submit" value="submit">
-    </form>
 </body>
 
+<footer>
+<form id="form" action="https://www.freecodecamp.org/email-submit">
+    <label for="email">Sign up for the mailing list:</label>
+    <br>
+    <input type="email" placeholder="email address" value="email" required>
+    <input type="submit" value="submit">
+</form>
+</footer>
 
 </html>
