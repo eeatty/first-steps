@@ -17,7 +17,7 @@
         padding: 5px;
         overflow: hidden;
     }
-    li a {
+    li a{
         float: left;
         color: lavender;
         text-align: center;
@@ -26,6 +26,7 @@
     }
     li a:hover {
         background-color: #111;
+        color: lightpink;
     }
     #header-img {
         width: 50px;
@@ -63,8 +64,16 @@
         margin: 10px;
         padding-left: 10px;
     }
-    h1 {
+    h2 {
         text-align: center;
+    }
+    h1 {
+        background-color: rgb(12, 10, 10);
+        color: rgb(238, 8, 130);
+        border: solid 10px rgb(59, 54, 54);
+        width: 200px;
+        padding: 10px;
+        text-align: center
     }
 </style>
 
@@ -82,10 +91,10 @@
 </header>
 
 <body>
-
+<h1>ZFashion</h1>
     <a name="about">
     <br>
-    <h1>About Zfashion</h1>
+    <h2>About ZFashion</h2>
     <div class="container">
     <img src="https://images.pexels.com/photos/5435548/pexels-photo-5435548.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="female zombie" width="100px">
     <p>Being zombified no longer means wretched fashion choices. Even the undead can be fashionable with ZFashion.
@@ -96,14 +105,14 @@
     </p>
 
     <a name="bride">
-    <h1>Bridal Looks</h1>
+    <h2>Bridal Looks</h2>
     <label for="video">Watch to see Barbie zombie fashion.</label>
     <br>
     <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/uUSafgf1uC0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </a>
 
     <a name="hair">
-    <h1>Salon Services</h1>
+    <h2>Salon Services</h2>
     <div class="container">
     <p>We offer a full menu of salon services with stylists trained in the unique needs of zombies. 
         Our stylists follow all the latest trends and adapt them for our customers. We even come to you!
@@ -119,8 +128,8 @@
 <form id="form" action="https://www.freecodecamp.org/email-submit">
     <label for="email">Sign up for the mailing list:</label>
     <br>
-    <input type="email" placeholder="email address" value="email" required>
-    <input type="submit" value="submit">
+    <input id="email" type="email" placeholder="email address">
+    <input id="submit" type="submit">
 </form>
 </footer>
 
