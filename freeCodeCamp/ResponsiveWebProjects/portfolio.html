@@ -2,21 +2,54 @@
 <html>
 <head>
     <style>
-
+header {
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding: 20px;                 
+  font-size: 25px;
+  Margin: 10px;
+  text-align: center;
+}
+.nav-link {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+.nav-link:hover {
+  background-color: teal;
+}
+body {
+    margin-left: 200px;
+    padding: 0 10px;
+}
     </style>
 </head>
+
 <header>
     <nav id="navbar">
         <a class="nav-link" href="#projects">Projects</a>
     </nav>
 </header>
+
+
+<body>
 <div id="welcome-section">
     <h1>Welcome</h1>
     <p>Welcome to my portfolio. This portfolio is built to include my varied skills and abilities in many areas.</p>
+</div>
 <div id="projects">
     <h1>Projects</h1>
     <div class="project-tile"></div>
+</div>
+</body>
 
-</div>
-</div>
+<footer></footer>
+
 </html>
