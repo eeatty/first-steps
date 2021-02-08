@@ -9,9 +9,9 @@ header {
   left: 0;
   background-color: black;
   overflow: hidden;
-  padding: 20px;                 
-  font-size: 25px;
-  Margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+  margin: 10px;
   text-align: center;
 }
 .nav-link {
@@ -26,33 +26,51 @@ header {
   background-color: teal;
 }
 body {
-    margin-top: 100px;
-    padding: 10px;
+  margin-top: 70px;
+  padding: 10px;
+}
+#welcome-section {
+  height: 100vh;
+}
+@media screen and (max-width: 500px) {
+  header {
+    font-size: 18px;
+    margin: 5px;
+  }
+  body {
+    margin-top: 60px;
+    padding: 5px;
+  }
 }
     </style>
 </head>
 
+
 <header>
-    <nav id="navbar">
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#find-me">Find Me</a>
-    </nav>
+  <nav id="navbar">
+    <a class="nav-link" href="#projects">Projects</a>
+    <a class="nav-link" href="#find-me">Find Me</a>
+  </nav>
 </header>
 
-
 <body>
-<div id="welcome-section">
-    <h1>Welcome</h1>
+  <div id="welcome-section">
+    <h1>Emily Atwood's Portfolio</h1>
+    <h2>Welcome</h2>
     <p>Welcome to my portfolio. This portfolio is built to include my varied skills and abilities in many areas.</p>
-</div>
-<div id="projects">
-    <h1>Projects</h1>
-    <div class="project-tile"></div>
-</div>
+  </div>
+  <div id="projects">
+    <h2>Projects</h2>
+    <div class="project-tile">
+      <a href="https://raw.githubusercontent.com/eeatty/first-steps/main/freeCodeCamp/ResponsiveWebProjects/TributePage.html">Tribute Page</a>
+    </div>
+  </div>
 </body>
 <div id="find-me">
-    <h1>Find Me</h1>
+  <h2>Find Me</h2>
+  <a target="_blank" href="https://github.com/eeatty">GitHub: eeatty</a> <br>
+  <a id="profile-link" target="_blank" href="https://www.freecodecamp.org/fcc95bf56de-34bd-4ef6-9ca1-819b77606159">freeCodeCamp</a>
+  <a href
 </div>
 <footer></footer>
-
 </html>
