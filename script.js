@@ -34,3 +34,24 @@ document.getElementById('start').addEventListener('click', () => {
     startTime = new Date().getTime();
 });
     
+typedValueElement.addEventListener('input', () => {
+    const currentWord = words[wordIndex];
+    const typedValue = typedValueElement.value;
+    
+     if (typedValue === currentWord && wordIndex === words.length - 1) {
+         const elapsedTime = new Date().getTime() - startTime;
+         const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
+    messageElement.innerText = message;
+  } else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
+      typedValueElement.value = '';   
+      wordIndex++;
+      for (const wordElement of quoteElement.childNodes) {
+      wordElement.className = '';
+    }
+      quoteElement.childNodes[wordIndex].className = 'highlight';
+  } else if (currentWord.startsWith(typedValue)) {
+    typedValueElement.className = '';
+  } else {
+      typedValueElement.className = 'error';
+  }
+});
