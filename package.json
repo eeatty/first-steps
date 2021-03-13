@@ -1,0 +1,19 @@
+{
+  "name": "carbon-app",
+  "version": "1.0.0",
+  "description": "track carbon use (a beginner project)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eeatty/first-steps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eeatty/first-steps/issues"
+  },
+  "homepage": "https://github.com/eeatty/first-steps#readme"
+}
