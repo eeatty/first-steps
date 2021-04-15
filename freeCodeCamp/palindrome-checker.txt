@@ -1,0 +1,20 @@
+function palindrome(str) {
+  var remove = /[\W_]/gi
+  var front = str.replace(remove, "").toLowerCase();
+  var tempFront = front.split("");
+  var tempBack = tempFront.reverse();
+  var back = tempBack.join("");
+
+  if (front === back) {
+    console.log (front, back, "; true, true");
+    return true;
+  } else {
+    console.log (front, back, "; not quite");
+    return false;
+  }
+
+}
+
+
+
+palindrome("A man, a plan, a canal. Panama");
