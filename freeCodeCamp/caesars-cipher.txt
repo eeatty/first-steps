@@ -1,0 +1,23 @@
+function rot13(str) {
+  var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var decoded = ""
+  var letter = ""
+
+  for (let i = 0; i < str.length; i++) {
+    letter = str[i];
+    var index = alpha.indexOf(letter);
+
+    if (index >= 0) {
+    var newIndex = (index + 13) % 26;
+    var newLetter = alpha[newIndex];
+    decoded += newLetter;
+    } else {
+      decoded += letter;
+    }
+  }
+  
+  console.log(decoded);
+  return decoded;
+}
+
+rot13("SERR PBQR PNZC");
