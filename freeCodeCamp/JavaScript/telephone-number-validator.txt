@@ -1,0 +1,47 @@
+function telephoneCheck(str) {
+  var notAllowed = /[a-z]/gi
+  var reNum = /[0-9]/
+  var reParenth = /[()]/
+  var numCount = 0
+  var parenthCount = 0
+  var arr = str.split("");
+  var noSpace = str.replace(/\s/g, "");
+  var formatA = /\d{3}-\d{3}-\d{4}/
+  var formatB = /\(\d{3}\)\d{3}-\d{4}/
+  var formatC = /\d{10}/
+  var formatD = /\(\d{10}\)/
+
+  for (let i = 0; i < arr.length; i++) {
+    if (reNum.exec(arr[i])) {
+      numCount++
+    }}
+
+  for (let i = 0; i < arr.length; i++) {
+    if (reParenth.exec(arr[i])) {
+      parenthCount++
+    }}
+
+console.log(noSpace);
+    
+    if (numCount < 10 || numCount > 11 || notAllowed.test(noSpace)) {
+      console.log(noSpace + " is not a valid number")
+      return false;
+    } else if (numCount == 11 && arr[0] != 1) {
+      console.log(noSpace + " is not a valid number")
+      return false;
+    }  else if (formatD.test(noSpace)) {
+      console.log(noSpace + " is not a valid number")
+      return false;
+    } else if (parenthCount == 1 || parenthCount > 2) {
+      console.log(noSpace + " is not a valid number")
+      return false;
+    } else if (formatA.test(noSpace) || formatB.test(noSpace) || formatC.test(noSpace))  {
+      console.log(noSpace + " is a valid format")
+      return true;
+    } else {
+      console.log(noSpace + " is not a valid number")
+      return false;
+    }
+}
+
+telephoneCheck("(555)555-5555");
