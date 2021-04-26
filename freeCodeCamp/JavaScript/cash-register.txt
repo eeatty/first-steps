@@ -1,0 +1,85 @@
+function checkCashRegister(price, cash, cid) {
+var changeDue = cash - price;
+var a = [...cid];
+var money = 0;
+var giveChange = [];
+var changeCount = [
+  ["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]
+]
+var display = { };
+
+for (let i = 0; i < a.length; i++) {
+  money += a[i][1];
+} 
+
+var drawer = {
+  tray: a, 
+  total: money.toFixed(2),
+  change: changeDue
+};
+
+var countDown = changeDue;
+
+while (countDown >= 0 && changeDue != money) {
+  if (countDown >= 100 && a[8][1] >= 100) {
+    a[8][1] -= 100;
+    countDown -= 100;
+    changeCount[8][1] += 100;
+    } else if (countDown >= 20 && a[7][1] >= 20) {
+    a[7][1] -= 20;
+    countDown -= 20;
+    changeCount[7][1] += 20;
+    } else if (countDown >= 10 && a[6][1] >= 10) {
+    a[6][1] -= 10;
+    countDown -= 10;
+    changeCount[6][1] += 10;
+    } else if (countDown >= 5 && a[5][1] >= 5) {
+    a[5][1] -= 5;
+    countDown -= 5;
+    changeCount[5][1] += 5;
+    } else if (countDown >= 1 && a[4][1] >= 1) {
+    a[4][1] -= 1;
+    countDown -= 1;
+    changeCount[4][1] += 1;
+    } else if (countDown >= 0.25 && a[3][1] >= 0.25) {
+    a[3][1] -= 0.25;
+    countDown -= 0.25;
+    changeCount[3][1] += 0.25;
+    } else if (countDown >= 0.10 && a[2][1] >= 0.10) {
+    a[2][1] -= 0.10;
+    countDown -= 0.10;
+    changeCount[2][1] += 0.10;
+    } else if (countDown >= 0.05 && a[1][1] >= 0.05) {
+    a[1][1] -= 0.05;
+    countDown -= 0.05;
+    changeCount[1][1] += 0.05;
+    } else if (countDown > 0 && a[0][1] > 0) {
+    a[0][1] -= 0.01;
+    countDown -= 0.01;
+    changeCount[0][1] += 0.01;
+    } }
+
+for (let i = 0; i < changeCount.length; i++) {
+  if (changeCount[i][1] > 0) {
+    giveChange.unshift(changeCount[i]);
+  }}
+
+console.log(countDown);
+
+  if (changeDue === money) {
+    display.status = "CLOSED";
+    display.change = a;
+  } else if (countDown > 0) {
+    display.status = "INSUFFICIENT_FUNDS";
+    display.change = [];
+  } else if (changeDue > 0) {
+    display.status = "OPEN";
+    display.change = giveChange;
+  } 
+
+console.log(display);
+
+return display;
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]);
